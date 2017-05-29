@@ -1,6 +1,21 @@
 <div class="home">
-    <h2>
-        Welcome ! Home
+    <h1>
+        Hi mate !
+    </h1>
 
-    </h2>
+    <h2>Select a bot</h2>
+
+    <ul>
+        <li *ngFor="let botName of botNames">
+            <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{botName}}</a>
+        </li>
+    </ul>
+
+    <h2>Select a bot</h2>
+
+    <form (submit)="addName()">
+        <input [(ngModel)]="newBotName" name="newBotName" placeholder="Bot Name" required>
+        <button type="submit">Add</button>
+    </form>
+
 </div>

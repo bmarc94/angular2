@@ -7,10 +7,11 @@ import './operators';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-app',
+  selector: 'app',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
 })
+
 export class AppComponent {
   constructor() {
     console.log('Environment config', Config);
