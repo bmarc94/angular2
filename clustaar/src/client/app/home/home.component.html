@@ -1,0 +1,21 @@
+<div class="home">
+    <a [routerLink]="['/login']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Logout</a>
+
+    <h2>
+        Welcome !
+
+    </h2>
+
+
+
+    <form (submit)="addName()">
+        <input [(ngModel)]="newBotName" name="newBotName" placeholder="Add a bot">
+        <button type="submit">Add</button>
+    </form>
+
+    <h1>Select a bot</h1>
+
+    <ul>
+        <li *ngFor="let name of names"><a [routerLink]="['/build']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{name}}</a></li>
+    </ul>
+</div>
