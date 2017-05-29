@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AuthenticationService } from '../shared/authentication/authentication.service';
+import { MessageService } from '../shared/message/message.service';
 
 @Component({
     moduleId: module.id,
@@ -17,13 +18,14 @@ export class LoginComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService) { }
+        private authenticationService: AuthenticationService,
+        private messageService: MessageService) { }
  
     ngOnInit() {
         this.authenticationService.logout();
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
- 
+
     login() {
         this.loading = true;
         window.setTimeout(()=>{
@@ -33,7 +35,7 @@ export class LoginComponent implements OnInit {
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
-                    alert(error);
+                    this.messageService.error(error);
                     this.loading = false;
                 });
         },1000)

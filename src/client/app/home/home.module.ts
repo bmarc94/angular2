@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.modules';
+
 
 @NgModule({
-  imports: [HomeRoutingModule, FormsModule,CommonModule],
+  imports: [HomeRoutingModule, FormsModule, SharedModule],
   declarations: [HomeComponent],
   exports: [],
   providers: []

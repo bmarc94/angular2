@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../shared/message/message.service';
 
 @Component({
   moduleId: module.id,
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
   newBotName: string = '';
   botNames: string[] = [];
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
     this.getNames();
@@ -27,11 +28,12 @@ export class HomeComponent implements OnInit {
     if (this.newBotName !== "") {
       if (this.botNames.indexOf(this.newBotName) === -1) {
         this.botNames.push(this.newBotName);
+        this.messageService.success('bot ' + this.newBotName + ' successfully created');
       } else {
-        alert('name ' + this.newBotName + 'alrady used')
+        this.messageService.error('bot ' + this.newBotName + 'already used');
       }
-    }else{
-      alert('need a name')
+    } else {
+      this.messageService.error('need a name')
     }
 
 

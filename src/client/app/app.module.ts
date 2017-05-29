@@ -10,8 +10,9 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { BotConfigModule } from './bot-config/bot-config.module';
 import { LoginModule } from './login/login.module';
-
 import { AuthGuard } from './shared/authentication/authentication-guard'
+import { MessageService } from './shared/message/message.service';
+
 
 
 
@@ -24,14 +25,14 @@ import { AuthGuard } from './shared/authentication/authentication-guard'
 
     HomeModule,
     LoginModule,
-    BotConfigModule,
-    
+    BotConfigModule
     ],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>',
-  },AuthGuard],
+  },
+  AuthGuard],
   bootstrap: [AppComponent]
 
 })
