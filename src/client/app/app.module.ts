@@ -11,6 +11,8 @@ import { HomeModule } from './home/home.module';
 import { BotConfigModule } from './bot-config/bot-config.module';
 import { LoginModule } from './login/login.module';
 
+import { AuthGuard } from './shared/authentication/authentication-guard'
+
 
 
 
@@ -23,12 +25,13 @@ import { LoginModule } from './login/login.module';
     HomeModule,
     LoginModule,
     BotConfigModule,
+    
     ],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>',
-  }],
+  },AuthGuard],
   bootstrap: [AppComponent]
 
 })
