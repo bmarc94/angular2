@@ -1,0 +1,15 @@
+<!--TODO: Composant navbar-->
+<h1>Titre du bot</h1>
+
+<!--TODO: Composant navbar-->
+<nav>
+    <a [routerLink]="['/build']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">BUILD</a>
+    <a [routerLink]="['/ai-setup']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">SETUP AI</a>
+    <a [routerLink]="['/broadcast']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">BROADCAST</a>
+    <a [routerLink]="['/configure']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">CONFIGURE</a>
+    <a [routerLink]="['/grow']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">GROW</a>
+    <a [routerLink]="['/analyze']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ANALYZE</a>
+    <span>|</span>
+    <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Bot Selection</a>
+</nav>
+<router-outlet></router-outlet>

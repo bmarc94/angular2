@@ -6,7 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+
 import { HomeModule } from './home/home.module';
+import { botConfigModule } from './bot-config/bot-config.module';
+
 
 
 
@@ -16,7 +19,8 @@ import { HomeModule } from './home/home.module';
     HttpModule, 
     AppRoutingModule,
 
-    HomeModule
+    HomeModule,
+    botConfigModule,
     ],
   declarations: [AppComponent],
   providers: [{
