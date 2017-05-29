@@ -21,4 +21,4 @@ import { GrowModule } from './grow/grow.module';
   exports: []
 })
 
-export class botConfigModule { }
+export class BotConfigModule { }

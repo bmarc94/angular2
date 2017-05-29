@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeModule } from './home/home.module';
-import { botConfigModule } from './bot-config/bot-config.module';
+import { BotConfigModule } from './bot-config/bot-config.module';
+import { LoginModule } from './login/login.module';
 
 
 
@@ -20,7 +21,8 @@ import { botConfigModule } from './bot-config/bot-config.module';
     AppRoutingModule,
 
     HomeModule,
-    botConfigModule,
+    LoginModule,
+    BotConfigModule,
     ],
   declarations: [AppComponent],
   providers: [{
