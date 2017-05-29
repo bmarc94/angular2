@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
 
 
 
@@ -14,6 +15,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpModule, 
     AppRoutingModule,
+
+    HomeModule
     ],
   declarations: [AppComponent],
   providers: [{
