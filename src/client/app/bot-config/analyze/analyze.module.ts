@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { AnalyzeComponent } from './analyze.component';
-import { AnalyzeRoutingModule } from './analyze-routing.module';
 
 @NgModule({
-  imports: [AnalyzeRoutingModule],
+  imports: [],
   declarations: [AnalyzeComponent],
   exports: [AnalyzeComponent]
 })

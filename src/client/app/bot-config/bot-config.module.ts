@@ -8,6 +8,7 @@ import { BuildModule } from './build/build.module';
 import { ConfigureModule } from './configure/configure.module';
 import { GrowModule } from './grow/grow.module';
 import { SharedModule } from '../shared/shared.modules';
+import { ConfigRoutingModule }from './bot-config-routing.module'
 
 import { LayoutComponent } from './layout/layout.component';
 
@@ -23,6 +24,7 @@ import { LayoutComponent } from './layout/layout.component';
     BuildModule,
     ConfigureModule,
     GrowModule,
+    ConfigRoutingModule
    ],
   declarations: [LayoutComponent],
   exports: []

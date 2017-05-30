@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
 import { AiSetupComponent } from './ai-setup.component';
-import { AiSetupRoutingModule } from './ai-setup-routing.module';
+/*import { AiSetupRoutingModule } from './ai-setup-routing.module';*/
 
 @NgModule({
-  imports: [AiSetupRoutingModule],
+  imports: [/*AiSetupRoutingModule*/],
   declarations: [AiSetupComponent],
   exports: [AiSetupComponent]
 })

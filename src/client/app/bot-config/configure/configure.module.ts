@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { ConfigureComponent } from './configure.component';
-import { ConfigureRoutingModule } from './configure-routing.module';
 
 @NgModule({
-  imports: [ConfigureRoutingModule],
+  imports: [],
   declarations: [ConfigureComponent],
   exports: [ConfigureComponent]
 })

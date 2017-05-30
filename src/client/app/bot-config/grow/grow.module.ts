@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { GrowComponent } from './grow.component';
-import { GrowRoutingModule } from './grow-routing.module';
 
 @NgModule({
-  imports: [GrowRoutingModule],
+  imports: [],
   declarations: [GrowComponent],
   exports: [GrowComponent]
 })
