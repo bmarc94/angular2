@@ -16,15 +16,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MessageComponent,
     ToolbarComponent],
   exports: [
-    MessageComponent,
     CommonModule,
-    ToolbarComponent
+    MessageComponent,
+    ToolbarComponent,
+    RouterModule
   ],
   providers: [
     MessageService
   ]
 })
 
-export class SharedModule {
-
-}
+export class SharedModule {}

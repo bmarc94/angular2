@@ -18,6 +18,8 @@
     <form (submit)="addName()">
         <input [(ngModel)]="newBotName" name="newBotName" placeholder="Bot Name" required>
         <button type="submit">Add</button>
+
+        <span>No bot service implemented, new bot will be deleted on navigation change</span>
     </form>
 
 </div>
