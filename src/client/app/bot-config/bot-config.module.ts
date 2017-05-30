@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared/shared.modules';
 import { ConfigRoutingModule }from './bot-config-routing.module'
+
 /* Component Module */
 import { AiSetupModule } from './ai-setup/ai-setup.module';
 import { AnalyzeModule } from './analyze/analyze.module';
@@ -11,6 +12,7 @@ import { ConfigureModule } from './configure/configure.module';
 import { GrowModule } from './grow/grow.module';
 
 import { LayoutComponent } from './layout/layout.component';
+import { NavBarComponent } from '../shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { LayoutComponent } from './layout/layout.component';
     GrowModule,
     ConfigRoutingModule
    ],
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent,NavBarComponent],
   exports: []
 })
 
