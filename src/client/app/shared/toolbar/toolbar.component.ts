@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
- 
+import { Component, Input } from '@angular/core';
+
 @Component({
     moduleId: module.id,
     selector: 'toolbar',
     templateUrl: 'toolbar.component.html',
     styleUrls: ['toolbar.component.css']
 })
- 
-export class ToolbarComponent { }
+
+export class ToolbarComponent {
+    @Input()
+    title: String = "Add a title";
+}
