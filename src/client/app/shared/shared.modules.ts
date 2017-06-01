@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { MessageComponent } from './message/message.component';
 import { MessageService } from './message/message.service';
+import { BotService } from './bot/bot.service';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     RouterModule
   ],
   providers: [
-    MessageService
+    MessageService,
+    BotService
   ]
 })
 

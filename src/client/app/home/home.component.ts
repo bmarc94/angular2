@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../shared/message/message.service';
+import { BotService } from '../shared/bot/bot.service';
+
 
 @Component({
   moduleId: module.id,
@@ -11,32 +13,24 @@ export class HomeComponent implements OnInit {
   newBotName: string = '';
   botNames: string[] = [];
 
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService, private botService: BotService) { }
 
   ngOnInit() {
-    this.getNames();
+    this.getBotNames();
   }
 
-  getNames() {
-    // TODO: implement botService
-    this.botNames = ['first bot', 'second bot'];
+  getBotNames() {
+    this.botNames = this.botService.getNames();
   }
 
-  addName(): boolean {
-    // TODO: implement botService
-    // TODO: implement alertService
-    if (this.newBotName !== "") {
-      if (this.botNames.indexOf(this.newBotName) === -1) {
+  addBot(): boolean {
+    this.botService.add(this.newBotName)
+      .then(message => {
+        this.messageService.success(message);
         this.botNames.push(this.newBotName);
-        this.messageService.success('bot ' + this.newBotName + ' successfully created');
-      } else {
-        this.messageService.error('bot ' + this.newBotName + 'already used');
-      }
-    } else {
-      this.messageService.error('need a name')
-    }
-
-
+      }).catch(message => {
+        this.messageService.error(message);
+      });
     return false;
   }
 
